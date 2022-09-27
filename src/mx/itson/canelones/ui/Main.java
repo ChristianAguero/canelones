@@ -42,14 +42,17 @@ public class Main {
              List<Paso> pasos = new ArrayList<>();
 
             Paso paso1 = new Paso();
+            paso1.setOrden(1);
             paso1.setDescripcion("Calienta el agua en una olla, añade las lentejas y cocina a fuego medio por 30 a 35 minutos.");
             pasos.add(paso1);
 
             Paso paso2 = new Paso();
+            paso2.setOrden(2);
             paso2.setDescripcion("Fríe el tocino con la cebolla y el ajo hasta que cambien de color, añade el chile, los jitomates y cocina por 5 minutos.");
             pasos.add(paso2);
             
             Paso paso3 = new Paso();
+            paso3.setOrden(3);
             paso3.setDescripcion("Vierte la preparación anterior a las lentejas, agrega el Concentrado de Tomate con Pollo CONSOMATE® y cocina por 5 minutos. Sirve y decora con el aguacate y el cilantro. Ofrece.");
             pasos.add(paso3);
         
