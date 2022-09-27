@@ -55,6 +55,8 @@ public class Main {
         
         receta.setPasos(pasos);
         
+        //Si lo hice 7w7
+        
         receta.setDificultad(Dificultad.FACIL);
         
     }
