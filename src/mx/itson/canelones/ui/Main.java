@@ -11,6 +11,7 @@ import java.util.List;
 import mx.itson.canelones.entidades.Ingrediente;
 import mx.itson.canelones.entidades.Paso;
 import mx.itson.canelones.entidades.Receta;
+import mx.itson.canelones.entidades.Usuario;
 import mx.itson.canelones.enumeradores.Dificultad;
 
 /**
@@ -36,6 +37,38 @@ public class Main {
             Ingrediente ingrediente2 = new Ingrediente();
             ingrediente2.setNombre("2 Cubos de Concentrado de Tomate con Pollo CONSOMATE®");
             ingredientes.add(ingrediente2);
+            
+            Ingrediente ingrediente3 = new Ingrediente();
+            ingrediente3.setNombre("1/2 Paquete de Tocino picado finamente (125 g)");
+            ingredientes.add(ingrediente3);
+            
+            Ingrediente ingrediente4 = new Ingrediente();
+            ingrediente4.setNombre("2 Cucharadas de Cebolla picada finamente");
+            ingredientes.add(ingrediente4);
+            
+            Ingrediente ingrediente5 = new Ingrediente();
+            ingrediente5.setNombre("1 Diente de Ajo picado finamente");
+            ingredientes.add(ingrediente5);
+            
+            Ingrediente ingrediente6 = new Ingrediente();
+            ingrediente6.setNombre("2 Chiles serrano sin semillas y picados");
+            ingredientes.add(ingrediente6);
+            
+            Ingrediente ingrediente7 = new Ingrediente();
+            ingrediente7.setNombre("3 Jitomates sin semillas y cortados en cubos");
+            ingredientes.add(ingrediente7);
+            
+            Ingrediente ingrediente8 = new Ingrediente();
+            ingrediente8.setNombre("2 Cubos de Concentrado de Tomate con Pollo CONSOMATE®");
+            ingredientes.add(ingrediente8);
+            
+            Ingrediente ingrediente9 = new Ingrediente();
+            ingrediente9.setNombre("1 Aguacate cortado en cubos");
+            ingredientes.add(ingrediente9);
+            
+            Ingrediente ingrediente10 = new Ingrediente();
+            ingrediente10.setNombre("2 Ramitas de Cilantro fresco desinfectado y picado finamente");
+            ingredientes.add(ingrediente10);
         
         receta.setIngredientes(ingredientes);
         
@@ -60,9 +93,18 @@ public class Main {
                 
         receta.setDificultad(Dificultad.FACIL);
         
+        Usuario usuario = new Usuario();
+        
+        usuario.setNombre("Christian Agüero");
+        usuario.setCorreo("chris.aguero.r@gmail.com");
+        usuario.setContrasenia("LiellaBestoGeneracionLL");
+        
+        receta.setUsuario(usuario);
+        
         //Empieza a imprimir 7w7
         
         System.out.println("**RECETAS NESTLÉ**");
+        System.out.println("Por: " + receta.getUsuario().getNombre());
         System.out.println("Nombre: " + receta.getNombre());
         System.out.println("Descripcièon: " + receta.getDescripcion());
         System.out.println("");
@@ -89,6 +131,9 @@ public class Main {
         System.out.println("");
         System.out.println("La dificultad es: " + receta.getDificultad());
         
+        System.out.println("");
+        System.out.println("Contacto: " + receta.getUsuario().getCorreo());
+                
     }
     
 }
