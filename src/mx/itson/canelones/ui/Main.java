@@ -57,10 +57,37 @@ public class Main {
             pasos.add(paso3);
         
         receta.setPasos(pasos);
-        
-        //Si lo hice 7w7
-        
+                
         receta.setDificultad(Dificultad.FACIL);
+        
+        //Empieza a imprimir 7w7
+        
+        System.out.println("**RECETAS NESTLÉ**");
+        System.out.println("Nombre: " + receta.getNombre());
+        System.out.println("Descripcièon: " + receta.getDescripcion());
+        System.out.println("");
+        System.out.println("El número de porciones es de: " + receta.getNumeroPorciones());
+        System.out.println("El tiempo estimado es de: " + receta.getTiempo());
+        System.out.println("");
+        System.out.println("Ingredientes:");
+        
+        for(Ingrediente i : receta.getIngredientes()){
+            
+            System.out.println("- " + i.getNombre());
+            
+        }
+        
+         System.out.println("");
+        System.out.println("Pasos:");
+        
+        for(Paso p : receta.getPasos()){
+            
+            System.out.println(p.getOrden() + ".- " + p.getDescripcion());
+            
+        }
+        
+        System.out.println("");
+        System.out.println("La dificultad es: " + receta.getDificultad());
         
     }
     
