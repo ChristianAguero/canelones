@@ -5,6 +5,7 @@
  */
 package mx.itson.canelones.entidades;
 
+import com.google.gson.Gson;
 import java.util.List;
 import mx.itson.canelones.enumeradores.Dificultad;
 
@@ -23,6 +24,29 @@ public class Receta {
     private List<Paso> pasos;
     private Dificultad dificultad;
 
+    /**
+     * Sirve para transformar un archivo json a objetos de java
+     * @param json es el archivo json transformado a binario
+     * @return el archivo ya transformado a objetos de java
+     */
+    public Receta deserializar(String json){
+        
+        Receta receta = new Receta();
+        
+        try{
+            
+            receta = new Gson().fromJson(json, Receta.class);
+            
+        }catch(Exception ex){
+            
+            System.err.print("siOcurrió un error: " + ex.getMessage());
+            
+        }
+        
+        return receta;
+        
+    }
+    
     /**
      * @return the nombre
      */

@@ -24,7 +24,7 @@ public class Main {
         
         Receta receta = new Receta();
         receta.setNombre("Sopa de lentejas a la mexicana");
-        receta.setDescripcion("SOPA DE LENTEJAS A LA MEXICANA preparada con CONCENTRADO DE TOMATE CON POLLO CONSOMATE®.");
+        receta.setDescripcion("4");
         receta.setNumeroPorciones(4);
         receta.setTiempo(62);
         
