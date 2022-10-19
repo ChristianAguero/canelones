@@ -54,6 +54,7 @@ public class Recetario extends javax.swing.JFrame {
         lblContacto = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jLabel1.setText("Seleccionar el archivo de origen de datos");
 
@@ -138,17 +139,17 @@ public class Recetario extends javax.swing.JFrame {
                                     .addComponent(lblDescripcion)
                                     .addComponent(lblDificultad)
                                     .addComponent(lblContacto))
-                                .addGap(0, 0, Short.MAX_VALUE)))
+                                .addGap(0, 998, Short.MAX_VALUE)))
                         .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(lblPorciones)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 606, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lblTiempo)
                         .addGap(354, 354, 354))))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1076, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1200, Short.MAX_VALUE)
                     .addContainerGap()))
         );
         layout.setVerticalGroup(
