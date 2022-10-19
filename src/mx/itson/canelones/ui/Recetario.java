@@ -8,6 +8,7 @@ import java.io.File;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import javax.swing.JFileChooser;
+import mx.itson.canelones.entidades.Receta;
 
 /**
  *
@@ -82,6 +83,10 @@ public class Recetario extends javax.swing.JFrame {
                 byte archivoBytes[] = Files.readAllBytes(archivo.toPath());
                 String contenido = new String(archivoBytes, StandardCharsets.UTF_8);
                 
+                Receta receta = new Receta().deserializar(contenido);
+                
+                System.out.println("Hola");
+                
             }
             
         }catch(Exception ex){
@@ -131,4 +136,8 @@ public class Recetario extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
+
+    private Recetario deserializar(String contenido) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
