@@ -24,7 +24,7 @@ public class Main {
         
         Receta receta = new Receta();
         receta.setNombre("Sopa de lentejas a la mexicana");
-        receta.setDescripcion("4");
+        receta.setDescripcion("SOPA DE LENTEJAS A LA MEXICANA preparada con CONCENTRADO DE TOMATE CON POLLO CONSOMATE®.");
         receta.setNumeroPorciones(4);
         receta.setTiempo(62);
         
@@ -106,7 +106,7 @@ public class Main {
         System.out.println("**RECETAS NESTLÉ**");
         System.out.println("Por: " + receta.getUsuario().getNombre());
         System.out.println("Nombre: " + receta.getNombre());
-        System.out.println("Descripcièon: " + receta.getDescripcion());
+        System.out.println("Descripción: " + receta.getDescripcion());
         System.out.println("");
         System.out.println("El número de porciones es de: " + receta.getNumeroPorciones());
         System.out.println("El tiempo estimado es de: " + receta.getTiempo());

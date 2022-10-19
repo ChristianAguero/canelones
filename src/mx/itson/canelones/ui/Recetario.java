@@ -8,6 +8,9 @@ import java.io.File;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import javax.swing.JFileChooser;
+import javax.swing.table.DefaultTableModel;
+import mx.itson.canelones.entidades.Ingrediente;
+import mx.itson.canelones.entidades.Paso;
 import mx.itson.canelones.entidades.Receta;
 
 /**
@@ -34,6 +37,21 @@ public class Recetario extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         btnBuscar = new javax.swing.JButton();
+        lblNombreEmpresa = new javax.swing.JLabel();
+        lblUsuario = new javax.swing.JLabel();
+        lblNombre = new javax.swing.JLabel();
+        lblDescripcion = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jSeparator2 = new javax.swing.JSeparator();
+        lblPorciones = new javax.swing.JLabel();
+        lblTiempo = new javax.swing.JLabel();
+        jSeparator3 = new javax.swing.JSeparator();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tblPasos = new javax.swing.JTable();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tblIngredientes = new javax.swing.JTable();
+        lblDificultad = new javax.swing.JLabel();
+        lblContacto = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -46,6 +64,57 @@ public class Recetario extends javax.swing.JFrame {
             }
         });
 
+        lblNombreEmpresa.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        lblNombreEmpresa.setText("Nombre empresa");
+
+        lblUsuario.setText("Elaborado por");
+
+        lblNombre.setText("Nombre de la receta");
+
+        lblDescripcion.setText("Descripción de la receta");
+
+        lblPorciones.setText("Porciones");
+
+        lblTiempo.setText("Tiempo estimado");
+
+        tblPasos.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
+            },
+            new String [] {
+                "Orden", "Descripción"
+            }
+        ));
+        tblPasos.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
+        jScrollPane1.setViewportView(tblPasos);
+        if (tblPasos.getColumnModel().getColumnCount() > 0) {
+            tblPasos.getColumnModel().getColumn(0).setPreferredWidth(100);
+            tblPasos.getColumnModel().getColumn(1).setPreferredWidth(1000);
+        }
+
+        tblIngredientes.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null},
+                {null},
+                {null},
+                {null}
+            },
+            new String [] {
+                "Ingredientes"
+            }
+        ));
+        jScrollPane2.setViewportView(tblIngredientes);
+        if (tblIngredientes.getColumnModel().getColumnCount() > 0) {
+            tblIngredientes.getColumnModel().getColumn(0).setPreferredWidth(100);
+        }
+
+        lblDificultad.setText("Dificultad");
+
+        lblContacto.setText("Contacto");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -53,9 +122,34 @@ public class Recetario extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(btnBuscar))
-                .addContainerGap(186, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jSeparator2)
+                            .addComponent(jSeparator1)
+                            .addComponent(jSeparator3)
+                            .addComponent(jScrollPane1)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel1)
+                                    .addComponent(btnBuscar)
+                                    .addComponent(lblNombreEmpresa)
+                                    .addComponent(lblUsuario)
+                                    .addComponent(lblNombre)
+                                    .addComponent(lblDescripcion)
+                                    .addComponent(lblDificultad)
+                                    .addComponent(lblContacto))
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblPorciones)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 606, Short.MAX_VALUE)
+                        .addComponent(lblTiempo)
+                        .addGap(354, 354, 354))))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1076, Short.MAX_VALUE)
+                    .addContainerGap()))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -64,7 +158,36 @@ public class Recetario extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnBuscar)
-                .addContainerGap(242, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblNombreEmpresa)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblUsuario)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblNombre)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblDescripcion)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblPorciones)
+                    .addComponent(lblTiempo))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(152, 152, 152)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblDificultad)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblContacto)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(230, 230, 230)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(161, Short.MAX_VALUE)))
         );
 
         pack();
@@ -85,8 +208,36 @@ public class Recetario extends javax.swing.JFrame {
                 
                 Receta receta = new Receta().deserializar(contenido);
                 
-                System.out.println("Hola");
+               // System.out.println("Hola");
+               
+               lblNombreEmpresa.setText("**RECETAS NESTLÉ**");
+               lblUsuario.setText("Por: " + receta.getUsuario().getNombre());
+               lblNombre.setText("Nombre: " + receta.getNombre());
+               lblDescripcion.setText("Descripción: " + receta.getDescripcion());
+               lblPorciones.setText("El número de porciones es de: " + receta.getNumeroPorciones());
+               lblTiempo.setText("El tiempo estimado es de: " + receta.getTiempo());
+               
+               DefaultTableModel modelo = (DefaultTableModel) tblIngredientes.getModel();
+                modelo.setRowCount(0);
                 
+                for(Ingrediente i : receta.getIngredientes()){
+                    
+                    modelo.addRow(new Object[] {i.getNombre()});
+                    
+                }
+                
+                DefaultTableModel modelo1 = (DefaultTableModel) tblPasos.getModel();
+                modelo1.setRowCount(0);
+                
+                for(Paso p : receta.getPasos()){
+                    
+                    modelo1.addRow(new Object[] {p.getOrden(), p.getDescripcion()});
+                    
+                }
+                
+                lblDificultad.setText("La dificultad de esta receta es: " + receta.getDificultad());
+                lblContacto.setText("Contacto: " + receta.getUsuario().getCorreo());
+               
             }
             
         }catch(Exception ex){
@@ -135,6 +286,21 @@ public class Recetario extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBuscar;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JLabel lblContacto;
+    private javax.swing.JLabel lblDescripcion;
+    private javax.swing.JLabel lblDificultad;
+    private javax.swing.JLabel lblNombre;
+    private javax.swing.JLabel lblNombreEmpresa;
+    private javax.swing.JLabel lblPorciones;
+    private javax.swing.JLabel lblTiempo;
+    private javax.swing.JLabel lblUsuario;
+    private javax.swing.JTable tblIngredientes;
+    private javax.swing.JTable tblPasos;
     // End of variables declaration//GEN-END:variables
 
     private Recetario deserializar(String contenido) {
