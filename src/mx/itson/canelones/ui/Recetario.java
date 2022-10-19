@@ -236,6 +236,9 @@ public class Recetario extends javax.swing.JFrame {
                     
                 }
                 
+                tblPasos.getColumnModel().getColumn(0).setPreferredWidth(100);
+                tblPasos.setAutoResizeMode(tblPasos.AUTO_RESIZE_LAST_COLUMN);
+                
                 lblDificultad.setText("La dificultad de esta receta es: " + receta.getDificultad());
                 lblContacto.setText("Contacto: " + receta.getUsuario().getCorreo());
                
