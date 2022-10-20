@@ -91,7 +91,7 @@ public class Main {
         
         receta.setPasos(pasos);
                 
-        receta.setDificultad(Dificultad.FACIL);
+        receta.setDificultad(Dificultad.Fácil);
         
         Usuario usuario = new Usuario();
         

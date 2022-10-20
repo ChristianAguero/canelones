@@ -5,12 +5,21 @@
  */
 package mx.itson.canelones.enumeradores;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
  *
  * @author Christian
  */
 public enum Dificultad {
     
-    FACIL, INTERMEDIO, DESAFIANTE
+    @SerializedName("1")
+    Fácil, 
+    
+    @SerializedName("2")
+    Intermedio, 
+    
+    @SerializedName("3")
+    Desafiante
     
 }

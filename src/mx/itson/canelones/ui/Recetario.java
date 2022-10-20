@@ -241,6 +241,37 @@ public class Recetario extends javax.swing.JFrame {
                 
                 lblDificultad.setText("La dificultad de esta receta es: " + receta.getDificultad());
                 lblContacto.setText("Contacto: " + receta.getUsuario().getCorreo());
+                
+                    System.out.println("**RECETAS NESTLÉ**");
+                    System.out.println("Por: " + receta.getUsuario().getNombre());
+                    System.out.println("Nombre: " + receta.getNombre());
+                    System.out.println("Descripción: " + receta.getDescripcion());
+                    System.out.println("");
+                    System.out.println("El número de porciones es de: " + receta.getNumeroPorciones());
+                    System.out.println("El tiempo estimado es de: " + receta.getTiempo());
+                    System.out.println("");
+                    System.out.println("Ingredientes:");
+
+                    for(Ingrediente i : receta.getIngredientes()){
+
+                        System.out.println("- " + i.getNombre());
+
+                    }
+
+                     System.out.println("");
+                     System.out.println("Pasos:");
+
+                    for(Paso p : receta.getPasos()){
+
+                        System.out.println(p.getOrden() + ".- " + p.getDescripcion());
+
+                    }
+
+                    System.out.println("");
+                    System.out.println("La dificultad es: " + receta.getDificultad());
+
+                    System.out.println("");
+                    System.out.println("Contacto: " + receta.getUsuario().getCorreo());
                
             }
             
